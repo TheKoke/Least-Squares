@@ -197,7 +197,8 @@
                 <Button x:Name="StartButton" 
                     Content="Start" 
                     BorderBrush="{x:Null}"
-                    FontSize="14">
+                    FontSize="14"
+                    Click="AddButton_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
