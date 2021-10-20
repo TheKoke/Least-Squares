@@ -20,8 +20,4 @@
     <Resource Include="additional\images\Logo.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MVVM\View\" />
-  </ItemGroup>
-
 </Project>

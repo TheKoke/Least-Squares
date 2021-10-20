@@ -8,7 +8,6 @@
         Title="MainWindow" Height="600" Width="900"
         WindowStyle="None"
         AllowsTransparency="True">
-
     <Grid Background="#181735">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -48,10 +47,11 @@
 
             <Button x:Name="AddButton" 
                     Grid.Column="2"
-                    Content="Add Table" 
+                    Content="Table" 
                     BorderBrush="{x:Null}"
                     FontFamily="additional/fonts/#Dosis"
-                    FontSize="20">
+                    FontSize="20"
+                    Click="AddButton_Click">
 
                 <Button.Style>
                     <Style TargetType="Button">
@@ -100,7 +100,7 @@
                                 <Setter Property="Background" Value="DarkRed"/>
                             </Trigger>
                         </Style.Triggers>
-                        
+
                     </Style>
                 </Button.Style>
 
@@ -109,7 +109,36 @@
                         <Border HorizontalAlignment="Stretch"
                                 VerticalAlignment="Stretch"
                                 Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
 
+            </Button>
+
+            <Button x:Name="CloseTable"
+                    Click="CloseTable_Click"
+                    Grid.Column="8"
+                    BorderBrush="{x:Null}"
+                    Content="Stop"
+                    FontSize="20"
+                    FontFamily="additional/fonts/#Dosis"
+                    IsEnabled="False"
+                    Visibility="Hidden">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#39385D"/>
+                        <Setter Property="Foreground" Value="Gainsboro"/>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch">
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"/>
                         </Border>
@@ -117,10 +146,10 @@
                 </Button.Template>
                 
             </Button>
-
         </Grid>
 
-        <StackPanel Grid.Row="1"
+        <StackPanel x:Name="WelcomePanel"
+                    Grid.Row="1"
                     VerticalAlignment="Center"
                     Margin="60">
 
@@ -197,7 +226,7 @@
 
                 </Button>
 
-                <Button x:Name="Button" 
+                <Button x:Name="FormulasButton" 
                         Content="Formulas" 
                         BorderBrush="{x:Null}"
                         FontSize="14"
@@ -286,5 +315,14 @@
             </StackPanel>
 
         </Grid>
+
+        <Frame x:Name="TableFrame"
+               Grid.Row="1"
+               Grid.ColumnSpan="2"
+               Margin="20"
+               NavigationUIVisibility="Hidden"
+               Panel.ZIndex="-2">
+            
+        </Frame>
     </Grid>
 </Window>
