@@ -35,7 +35,7 @@
                    IsHitTestVisible="False"
                    FontSize="20"
                    FontFamily="Dosis ExtraLight"
-                   Text="Введите"
+                   Text="Введите сюда"
                    Foreground="#ff525549"
                    Margin="13 10 0 0"
                    VerticalAlignment="Top">
@@ -50,6 +50,15 @@
                 </Style>
             </TextBlock.Style>
         </TextBlock>
+
+        <StackPanel x:Name="Root" MouseRightButtonUp="Root_MouseRightButtonUp">
+            <Button x:Name="ColumnButton"
+                    Visibility="Hidden"
+                    IsEnabled="False"
+                    Content="Добавить Столбец">
+                
+            </Button>
+        </StackPanel>
 
     </Grid>
 </Page>
