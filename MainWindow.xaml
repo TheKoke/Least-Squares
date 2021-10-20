@@ -9,9 +9,7 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border Background="#272537"
-            CornerRadius="10">
-
+    
     <Grid Background="#181735" Width="901">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500"/>
