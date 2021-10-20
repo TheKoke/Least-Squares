@@ -13,5 +13,43 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="Scope"
+                 Grid.Column="1"
+                 FontFamily="Dosis ExtraLight"
+                 Margin="10 10 10 0"
+                 VerticalAlignment="Top">
+            
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Background" Value="#2F2E4F"/>
+                    <Setter Property="Foreground" Value="Gainsboro"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Height" Value="170"/>
+                    <Setter Property="Cursor" Value="IBeam"/>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <TextBlock Grid.Column="1"
+                   IsHitTestVisible="False"
+                   FontSize="20"
+                   FontFamily="Dosis ExtraLight"
+                   Text="Введите"
+                   Foreground="#ff525549"
+                   Margin="13 10 0 0"
+                   VerticalAlignment="Top">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=Scope}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
     </Grid>
 </Page>
