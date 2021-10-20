@@ -12,26 +12,75 @@
     <Border Background="#272537"
             CornerRadius="10">
 
-        <Grid>
+    <Grid Background="#181735" Width="901">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#0F0F2D"
+                  Grid.Row="0"
+                  Grid.ColumnSpan="2" RenderTransformOrigin="0.556,0.55">
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition Width="2.8*"/>
+                <ColumnDefinition Width="2.8*"/>
+                <ColumnDefinition Width="2.8*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
             <TextBlock Text="Least Squares"
-                       TextAlignment="Center"
-                       FontSize="22"
-                       FontFamily="./Fonts/#Dosis"
-                       Foreground="Gainsboro">
+                           TextAlignment="Center"
+                           FontFamily="Fonts/#Dosis"
+                           Foreground="Gainsboro"
+                           FontSize="25"/>
+
+            <Button x:Name="AddButton" 
+                    Grid.Column="1"
+                    Content="Add Table" 
+                    BorderBrush="{x:Null}"
+                    FontSize="22">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="TextElement.Foreground" Value="Gainsboro"/>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#0C0C1F"/>
+                            </Trigger>
+                        </Style.Triggers>
+                        
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
                 
-            </TextBlock>
-            
-            
+            </Button>
+
         </Grid>
-    </Border>
+
+
+
+    </Grid>
 </Window>
