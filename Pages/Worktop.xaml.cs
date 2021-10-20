@@ -24,5 +24,26 @@ namespace LeastSquare.Pages
         {
             InitializeComponent();
         }
+
+        private void Root_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Button addbutton = new()
+            {
+                Width = 78,
+                Height = 21,
+                Background = new SolidColorBrush(Colors.Gainsboro),
+                Foreground = new SolidColorBrush(Colors.Black),
+                Content = "Добавить столбец",
+                Cursor = Cursors.Hand,
+            };
+
+            if (!Root.Children.Contains(addbutton))
+            {
+                Root.Children.Add(addbutton);
+            }
+
+            Canvas.SetLeft(addbutton, Mouse.GetPosition(Root).X);
+            Canvas.SetTop(addbutton, Mouse.GetPosition(Root).Y);
+        }
     }
 }
