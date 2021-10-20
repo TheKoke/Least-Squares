@@ -24,10 +24,5 @@ namespace LeastSquare.Pages
         {
             InitializeComponent();
         }
-
-        private void Root_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
     }
 }
