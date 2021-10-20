@@ -16,12 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model-View\" />
+    <Resource Include="additional\fonts\Dosis.ttf" />
+    <Resource Include="additional\images\Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="additional\fonts\Dosis.ttf" />
-    <Resource Include="additional\images\Logo.png" />
+    <Folder Include="MVVM\View\" />
   </ItemGroup>
 
 </Project>

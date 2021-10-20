@@ -21,7 +21,8 @@
         </Grid.RowDefinitions>
 
         <Grid Background="#0F0F2D"
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              MouseDown="Grid_MouseDown">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -81,6 +82,42 @@
 
             </Button>
 
+            <Button x:Name="CloseButton"
+                    Click="CloseButton_Click"
+                    Grid.Column="9"
+                    Content="Close"
+                    BorderBrush="{x:Null}"
+                    FontSize="20"
+                    FontFamily="additional/fonts/#Dosis">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Firebrick"/>
+                        <Setter Property="TextElement.Foreground" Value="Gainsboro"/>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkRed"/>
+                            </Trigger>
+                        </Style.Triggers>
+                        
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+                
+            </Button>
+
         </Grid>
 
         <StackPanel Grid.Row="1"
@@ -90,13 +127,13 @@
             <StackPanel Orientation="Horizontal"
                         Margin="0 0 0 20">
 
-                <Image Height="50" Width="50"
+                <Image Height="70" Width="70"
                        Source="additional/images/Logo.png"
                        RenderOptions.BitmapScalingMode="Fant"/>
 
                 <TextBlock Text="ApproximatorTM"
                            Foreground="White"
-                           FontSize="20"
+                           FontSize="23"
                            VerticalAlignment="Center"
                            FontFamily="additional/fonts/#Dosis"
                            Margin="10 0 0 0"/>
@@ -107,19 +144,19 @@
 
                 <TextBlock Text="Calculate Anything"
                        Foreground="White"
-                       FontSize="27"
+                       FontSize="32"
                        FontFamily="additional/fonts/#Dosis"
                        FontWeight="Medium"/>
 
                 <TextBlock Text="We are MathFans"
                        Foreground="White"
-                       FontSize="29"
+                       FontSize="34"
                        FontFamily="additional/fonts/#Dosis"
                        FontWeight="Medium"/>
 
                 <TextBlock Text="F*ck Excel"
                        Foreground="White"
-                       FontSize="27"
+                       FontSize="32"
                        FontFamily="additional/fonts/#Dosis"
                        FontWeight="Medium"/>
 
@@ -148,7 +185,7 @@
 
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="25"
+                            <Border Width="130" Height="35"
                                     Background="{TemplateBinding Background}"
                                     CornerRadius="10">
                                 <ContentPresenter VerticalAlignment="Center"
@@ -173,7 +210,7 @@
                             <Setter Property="TextElement.FontFamily" Value="additional/fonts/#Dosis"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#3A3952"/>
+                                    <Setter Property="Background" Value="#2A2741"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -181,7 +218,7 @@
 
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="25"
+                            <Border Width="130" Height="35"
                                     Background="{TemplateBinding Background}"
                                     CornerRadius="10">
                                 <ContentPresenter VerticalAlignment="Center"
@@ -196,6 +233,58 @@
 
         </StackPanel>
 
+        <Grid Grid.Column="1"
+              Grid.RowSpan="2"
+              Margin="160, -305, -610, 85"
+              Panel.ZIndex="-1">
 
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50"/>
+            </Grid.RenderTransform>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="-350, 274, -255, -250">
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3DDDC2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#FC6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3DDDC2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#FC6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Window>
