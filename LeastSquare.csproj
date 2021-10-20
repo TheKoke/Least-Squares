@@ -7,7 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="additional\fonts\Dosis.ttf" />
+    <None Remove="additional\images\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model-View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="additional\fonts\Dosis.ttf" />
+    <Resource Include="additional\images\Logo.png" />
   </ItemGroup>
 
 </Project>
