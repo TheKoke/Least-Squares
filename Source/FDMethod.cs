@@ -6,7 +6,17 @@ namespace LeastSquare.Source
 {
     public static class FDMethod
     {
-        public static int GetOrderOfEquation(double[] y, out List<double[]> differenceTable)
+        public static string EquationType(double[] y, out List<double[]> differenceSheet)
+            => GetOrderOfEquation(y, out differenceSheet) switch
+        {
+            1 => "y = ax + b",
+            2 => "y = ax^2 + bx + c",
+            3 => "y = ax^3 + bx^2 + cx + d",
+            -1 => "y = a*exp(x) + c",
+            _  => ""
+        };
+
+        private static int GetOrderOfEquation(double[] y, out List<double[]> differenceTable)
         {
             differenceTable = new List<double[]>();
 
