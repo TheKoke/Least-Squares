@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace LeastSquare.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Worktop.xaml
+    /// Логика взаимодействия для Formulas.xaml
     /// </summary>
-    public partial class Worktop : Page
+    public partial class Formulas : Page
     {
-        public Worktop()
+        public Formulas()
         {
             InitializeComponent();
-        }
-
-        private void Root_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
-        {
-
         }
     }
 }
