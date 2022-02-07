@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace LeastSquare.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для Worktop.xaml
-    /// </summary>
     public partial class Worktop : Page
     {
         public Worktop()
@@ -25,9 +22,14 @@ namespace LeastSquare.Pages
             InitializeComponent();
         }
 
-        private void Root_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        private void Root_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            if (e.ChangedButton == MouseButton.Right)
+            {
+                ColumnButton.IsEnabled = true;
+                ColumnButton.Background = Brushes.Khaki;
+                ColumnButton.Visibility = Visibility.Visible;
+            }
         }
     }
 }
