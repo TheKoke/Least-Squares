@@ -51,42 +51,14 @@
             </TextBlock.Style>
         </TextBlock>
 
-        <Canvas x:Name="Root" 
-                    MouseRightButtonUp="Root_MouseRightButtonUp">
-            
+        <StackPanel x:Name="Root" MouseRightButtonUp="Root_MouseRightButtonUp">
             <Button x:Name="ColumnButton"
                     Visibility="Hidden"
                     IsEnabled="False"
-                    Content="Добавить Столбец" 
-                    Cursor="Hand">
-
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="Gainsboro"/>
-                        <Setter Property="TextElement.Foreground" Value="Black"/>
-                        <Setter Property="TextElement.FontFamily" Value="additional/fonts/#Dosis"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#2F2E4F"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Width="78" Height="21"
-                                    Background="{TemplateBinding Background}"
-                                    CornerRadius="10">
-                            <ContentPresenter VerticalAlignment="Center"
-                                              HorizontalAlignment="Center"/>
-
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-
+                    Content="Добавить Столбец">
+                
             </Button>
-        </Canvas>
+        </StackPanel>
 
     </Grid>
 </Page>
