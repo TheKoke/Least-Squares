@@ -117,8 +117,8 @@
 
             </Button>
 
-            <Button x:Name="CloseTable"
-                    Click="CloseTable_Click"
+            <Button x:Name="CloseTableButton"
+                    Click="CloseTableButton_Click"
                     Grid.Column="8"
                     BorderBrush="{x:Null}"
                     Content="Stop"

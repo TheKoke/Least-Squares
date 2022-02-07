@@ -7,11 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="530" d:DesignWidth="860"
       Title="Worktop">
-
-    <Grid Background="#1F1E3C">
+    <Grid x:Name="MainGrid"
+          Background="#1F1E3C"
+          MouseRightButtonUp="Grid_MouseRightButtonUp"
+          MouseLeftButtonDown="MainGrid_MouseLeftButtonDown">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="573"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="Scope"
@@ -19,7 +21,7 @@
                  FontFamily="Dosis ExtraLight"
                  Margin="10 10 10 0"
                  VerticalAlignment="Top">
-            
+
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="Background" Value="#2F2E4F"/>
@@ -51,8 +53,25 @@
             </TextBlock.Style>
         </TextBlock>
 
-        <Canvas x:Name="Root" MouseDown="Root_MouseDown">
-            
-        </Canvas>
+        <Button x:Name="AddingButton"
+                Content="Добавить Столбец"
+                Height="20"
+                Width="110"
+                Focusable="True"
+                Visibility="Hidden"
+                IsEnabled="False" BorderBrush="{x:Null}">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="TextElement.Foreground" Value="Black"/>
+                    <Setter Property="Background" Value="Gainsboro"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="BorderBrush" Value="{x:Null}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Page>
