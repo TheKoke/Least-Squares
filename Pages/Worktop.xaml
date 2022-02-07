@@ -59,7 +59,9 @@
                 Width="110"
                 Focusable="True"
                 Visibility="Hidden"
-                IsEnabled="False" BorderBrush="{x:Null}">
+                IsEnabled="False" 
+                BorderBrush="{x:Null}"
+                Click="AddingButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="TextElement.Foreground" Value="Black"/>
