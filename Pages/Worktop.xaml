@@ -51,9 +51,13 @@
             </TextBlock.Style>
         </TextBlock>
 
-        <StackPanel x:Name="Root" 
-                MouseRightButtonUp="Root_MouseRightButtonUp">
-            
+        <StackPanel x:Name="Root" MouseRightButtonUp="Root_MouseRightButtonUp">
+            <Button x:Name="ColumnButton"
+                    Visibility="Hidden"
+                    IsEnabled="False"
+                    Content="Добавить Столбец">
+                
+            </Button>
         </StackPanel>
 
     </Grid>
