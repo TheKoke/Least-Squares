@@ -51,13 +51,8 @@
             </TextBlock.Style>
         </TextBlock>
 
-        <StackPanel x:Name="Root" MouseDown="Root_MouseDown">
-            <Button x:Name="ColumnButton"
-                    Visibility="Hidden"
-                    IsEnabled="False"
-                    Content="Добавить Столбец">
-
-            </Button>
-        </StackPanel>
+        <Canvas x:Name="Root" MouseDown="Root_MouseDown">
+            
+        </Canvas>
     </Grid>
 </Page>
