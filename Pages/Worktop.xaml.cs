@@ -26,9 +26,7 @@ namespace LeastSquare.Pages
         {
             if (e.ChangedButton == MouseButton.Right)
             {
-                ColumnButton.IsEnabled = true;
-                ColumnButton.Background = Brushes.Khaki;
-                ColumnButton.Visibility = Visibility.Visible;
+                
             }
         }
     }
