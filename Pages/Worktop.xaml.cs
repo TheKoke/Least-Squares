@@ -22,12 +22,24 @@ namespace LeastSquare.Pages
             InitializeComponent();
         }
 
-        private void Root_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Grid_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Right)
+            AddingButton.Visibility = Visibility.Visible;
+            AddingButton.IsEnabled = true;
+
+            Point coordinates = Mouse.GetPosition(MainGrid);
+            AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width), 
+                coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
+        }
+
+        private void MainGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (AddingButton.IsEnabled)
             {
-                
+                AddingButton.IsEnabled = false;
+                AddingButton.Visibility = Visibility.Hidden;
             }
         }
     }
 }
+

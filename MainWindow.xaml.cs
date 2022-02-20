@@ -47,11 +47,11 @@ namespace LeastSquare
             Panel.SetZIndex(TableFrame, -1);
             TableFrame.Content = new Pages.Worktop();
 
-            CloseTable.IsEnabled = true;
-            CloseTable.Visibility = Visibility.Visible;
+            CloseTableButton.IsEnabled = true;
+            CloseTableButton.Visibility = Visibility.Visible;
         }
 
-        private void CloseTable_Click(object sender, RoutedEventArgs e)
+        private void CloseTableButton_Click(object sender, RoutedEventArgs e)
         {
             WelcomePanel.Visibility = Visibility.Visible;
             StartButton.IsEnabled = true;
@@ -60,8 +60,8 @@ namespace LeastSquare
             Panel.SetZIndex(TableFrame, -2);
             TableFrame.Content = null;
 
-            CloseTable.IsEnabled = false;
-            CloseTable.Visibility = Visibility.Hidden;
+            CloseTableButton.IsEnabled = false;
+            CloseTableButton.Visibility = Visibility.Hidden;
         }
     }
 }
