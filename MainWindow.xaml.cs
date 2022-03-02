@@ -45,7 +45,7 @@ namespace LeastSquare
             FormulasButton.IsEnabled = false;
 
             Panel.SetZIndex(TableFrame, -1);
-            TableFrame.Content = new Pages.Worktop();
+            TableFrame.Content = new pages.Worktop();
 
             CloseTableButton.IsEnabled = true;
             CloseTableButton.Visibility = Visibility.Visible;

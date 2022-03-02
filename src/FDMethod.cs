@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LeastSquare.Source
+namespace LeastSquare.src
 {
     public static class FDMethod
     {
