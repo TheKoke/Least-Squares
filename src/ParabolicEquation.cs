@@ -24,9 +24,9 @@ namespace LeastSquare.Source
 
             double[] FreeNums = new double[] { y.Sum(), SumOfXY(x, y), SumOfX2Y(x, y) };
 
-            a = SLE_Solutions(SLE, FreeNums)[0];
-            b = SLE_Solutions(SLE, FreeNums)[1];
-            c = SLE_Solutions(SLE, FreeNums)[2];
+            a = SleSolver.SLE_Solutions(SLE, FreeNums)[0];
+            b = SleSolver.SLE_Solutions(SLE, FreeNums)[1];
+            c = SleSolver.SLE_Solutions(SLE, FreeNums)[2];
         }
 
         private static double SumOfXY(double[] x, double[] y)
