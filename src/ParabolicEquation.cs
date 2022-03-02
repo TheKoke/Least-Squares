@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LeastSquare.Source
+namespace LeastSquare.src
 {
     public static class ParabolicEquation
     {

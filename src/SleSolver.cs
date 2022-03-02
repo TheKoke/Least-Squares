@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeastSquare.Source
+namespace LeastSquare.src
 {
 	public class SleSolver
 	{
