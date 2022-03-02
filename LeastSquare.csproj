@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="additional\fonts\Dosis.ttf" />
+    <None Remove="additional\fonts\Smooch.ttf" />
     <None Remove="additional\images\Logo.png" />
   </ItemGroup>
 
@@ -17,6 +18,7 @@
 
   <ItemGroup>
     <Resource Include="additional\fonts\Dosis.ttf" />
+    <Resource Include="additional\fonts\Smooch.ttf" />
     <Resource Include="additional\images\Logo.png" />
   </ItemGroup>
 

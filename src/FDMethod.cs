@@ -27,13 +27,13 @@ namespace LeastSquare.src
             {
                 for (int j = 0; j < y.Length - 1; j++)
                 {
-                    y[j] = Math.Round(Math.Abs(y[j] - y[j + 1]), 3);
+                    y[j] = Math.Round(Math.Abs(y[j] - y[j + 1]), 5);
                 }
 
                 Array.Resize(ref y, y.Length - 1);
                 differenceTable.Add(y);
 
-                if (y.Sum() - y.Sum() / y.Length <= 0.01)
+                if (y.Sum() - y.Sum() / y.Length <= 0.0001)
                 {
                     differenceTable.Add(rateChange);
                     return i - 1;
@@ -50,7 +50,7 @@ namespace LeastSquare.src
 
             for (int i = 0; i < result.Length; i++)
             {
-                result[i] = Math.Round(y[i + 1] / y[i], 3);
+                result[i] = Math.Round(y[i + 1] / y[i], 5);
             }
 
             return result;

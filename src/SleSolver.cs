@@ -30,12 +30,16 @@ namespace LeastSquare.src
             for (int i = 0; i < Matrix.GetLength(0); i++)
             {
                 if (i == DelStr)
+                {
                     continue;
+                }
 
                 for (int j = 0; j < Matrix.GetLength(0); j++)
                 {
                     if (j == DelCol)
+                    {
                         continue;
+                    }
 
                     MinorMatrix[varForIndexStr, varForIndexCol] = Matrix[i, j];
                     varForIndexCol++;
@@ -48,9 +52,9 @@ namespace LeastSquare.src
             return MinorMatrix;
         }
 
-        public static double AlgebraicApp(double[,] Matrix, int firstIndex, int SecIndex)
+        public static double AlgebraicApp(double[,] Matrix, int rowIndex, int columnIndex)
         {
-            return Math.Pow(-1, firstIndex + SecIndex) * Determinant(GetMinor(Matrix, firstIndex, SecIndex));
+            return Math.Pow(-1, rowIndex + columnIndex) * Determinant(GetMinor(Matrix, rowIndex, columnIndex));
         }
 
         public static double[] SLE_Solutions(double[,] Matrix, double[] freeNums)

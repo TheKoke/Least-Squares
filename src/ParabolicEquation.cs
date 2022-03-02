@@ -18,7 +18,7 @@ namespace LeastSquare.src
             double[,] SLE = new double[,]
             {
                 { x.Length, x.Sum(), x.Sum(a => a * a) },
-                { x.Sum(), x.Sum(a => a * a), x.Sum(a => (float)Math.Pow(a, 3)) },
+                { x.Sum(), x.Sum(a => a * a), x.Sum(a => Math.Pow(a, 3)) },
                 { x.Sum(a => a * a), x.Sum(a => Math.Pow(a, 3)), x.Sum(a => Math.Pow(a, 4)) }
             };
 
