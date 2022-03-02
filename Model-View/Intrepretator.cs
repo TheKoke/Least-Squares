@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LeastSquare.Model_View
+namespace LeastSquare.model_view
 {
     public class Intrepretator
     {

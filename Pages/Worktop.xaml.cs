@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LeastSquare.Pages
+namespace LeastSquare.pages
 {
     public partial class Worktop : Page
     {
