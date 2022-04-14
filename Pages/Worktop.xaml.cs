@@ -28,24 +28,70 @@ namespace LeastSquare.pages
             AddingButton.IsEnabled = true;
 
             Point coordinates = Mouse.GetPosition(MainGrid);
+            if (coordinates.X > 573)
+            {
+                AddingButton_Click(sender, e);
+            }
+            else
+            {
+                HandleButtonPosition(coordinates);
+            }
+        }
+
+        private void HandleButtonPosition(Point coordinates)
+        {
+            //
             if (coordinates.X >= AddingButton.Width && coordinates.Y >= AddingButton.Height)
             {
                 AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width),
                 coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
             }
 
+            if (coordinates.X < AddingButton.Width && coordinates.Y >= AddingButton.Height)
+            {
+                AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width),
+                coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
+            }
+
+            if (coordinates.X >= AddingButton.Width && coordinates.Y < AddingButton.Height)
+            {
+                AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width),
+                coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
+            }
+
+            if (coordinates.X < AddingButton.Width && coordinates.Y < AddingButton.Height)
+            {
+                AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width),
+                coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
+            }
+            
+            //
             if (coordinates.X + AddingButton.Width > 573 && coordinates.Y >= AddingButton.Height)
             {
                 AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 + AddingButton.Width),
                 coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
             }
 
+            if (coordinates.X + AddingButton.Width > 573 && coordinates.Y < AddingButton.Height)
+            {
+                AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 + AddingButton.Width),
+                coordinates.Y * 2 - (530 - AddingButton.Height), 0, 0);
+            }
+
+            //
             if (coordinates.X >= AddingButton.Width && coordinates.Y + AddingButton.Height > 530)
             {
                 AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width),
                 coordinates.Y * 2 - (530 + AddingButton.Height), 0, 0);
             }
 
+            if (coordinates.X < AddingButton.Width && coordinates.Y + AddingButton.Height > 530)
+            {
+                AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 - AddingButton.Width),
+                coordinates.Y * 2 - (530 + AddingButton.Height), 0, 0);
+            }
+
+            //
             if (coordinates.X + AddingButton.Width > 573 && coordinates.Y + AddingButton.Height > 530)
             {
                 AddingButton.Margin = new Thickness(coordinates.X * 2 - (573 + AddingButton.Width),
@@ -53,7 +99,7 @@ namespace LeastSquare.pages
             }
         }
 
-        private void MainGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (AddingButton.IsEnabled)
             {

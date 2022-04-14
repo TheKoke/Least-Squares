@@ -10,7 +10,8 @@
     <Grid x:Name="MainGrid"
           Background="#1F1E3C"
           MouseRightButtonUp="Grid_MouseRightButtonUp"
-          MouseLeftButtonDown="MainGrid_MouseLeftButtonDown">
+          MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="573"/>
             <ColumnDefinition/>
@@ -18,14 +19,15 @@
 
         <TextBox x:Name="Scope"
                  Grid.Column="1"
-                 FontFamily="Dosis ExtraLight"
                  Margin="10 10 10 0"
-                 VerticalAlignment="Top">
+                 VerticalAlignment="Top"
+                 FontFamily="Dosis ExtraLight">
 
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="Background" Value="#2F2E4F"/>
                     <Setter Property="Foreground" Value="Gainsboro"/>
+                    <Setter Property="FontFamily" Value="additional/fonts/#Smooch"/>
                     <Setter Property="FontSize" Value="20"/>
                     <Setter Property="Height" Value="170"/>
                     <Setter Property="Cursor" Value="IBeam"/>
@@ -34,13 +36,13 @@
         </TextBox>
 
         <TextBlock Grid.Column="1"
-                   IsHitTestVisible="False"
-                   FontSize="20"
-                   FontFamily="Dosis ExtraLight"
-                   Text="Введите сюда"
-                   Foreground="#ff525549"
                    Margin="13 10 0 0"
-                   VerticalAlignment="Top">
+                   VerticalAlignment="Top"
+                   FontSize="20"
+                   FontFamily="additional/fonts/#Smooch"
+                   Foreground="#ff525549"
+                   Text="Введите сюда"
+                   IsHitTestVisible="False">
             <TextBlock.Style>
                 <Style TargetType="TextBlock">
                     <Setter Property="Visibility" Value="Collapsed"/>
@@ -54,13 +56,14 @@
         </TextBlock>
 
         <Button x:Name="AddingButton"
-                Content="Добавить Столбец"
                 Height="20"
                 Width="110"
-                Focusable="True"
-                Visibility="Hidden"
-                IsEnabled="False" 
+                FontFamily="additional/fonts/#Smooch"
+                Content="Добавить Столбец"
                 BorderBrush="{x:Null}"
+                IsEnabled="False" 
+                Visibility="Hidden"
+                Focusable="True"
                 Click="AddingButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
