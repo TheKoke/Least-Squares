@@ -21,7 +21,7 @@
                  Grid.Column="1"
                  Margin="10 10 10 0"
                  VerticalAlignment="Top"
-                 FontFamily="Dosis ExtraLight">
+                 FontFamily="additional/fonts/#Smooch">
 
             <TextBox.Style>
                 <Style TargetType="TextBox">
